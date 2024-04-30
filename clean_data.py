@@ -17,8 +17,6 @@ def clean_data():
         reader = csv.reader(csvfile)
         writer = csv.writer(outfile)
 
-        
-
         # Iterate over each row in the csv file
         for row in reader:
             if row:  # Check if the row is not empty
@@ -79,6 +77,7 @@ def clean_data():
                 writer.writerow(modified_row)
 
 
+# custom helper function for custom substrings
 def find_middle_text(start_string, end_string, text):
     # Define the start and end markers
     start_marker = start_string
@@ -98,5 +97,17 @@ def find_middle_text(start_string, end_string, text):
     return(extracted_text)
 
 
+# helper function for adding column names to the header just in case the data is corrupted
+def fix_column_names():
+    # Load the CSV file, assuming it has no header row
+    df = pd.read_csv('new_data_2.csv', header=None)
 
-clean_data()
+    # Assign new column names
+    df.columns = ["ID", "ENTIRE_PROMPT", "VIBE", "DETAILED_VIBE_YOU_CAN_IGNORE", "SUB_VIBE", "TITLE_DESCRIPTION", "WORK_SAFETY_RATING", "DIFFICULTY_RATING", "convo_starter_1", "english_translate_1", "media_1", "vocab_1_1", "vocab_2_1", "vocab_3_1", "funny_1", "example_response_1", "example_response_translate_1",  "convo_starter_2", "english_translate_2", "media_2", "vocab_1_2", "vocab_2_2", "vocab_3_2", "funny_2", "example_response_2", "example_response_translate_2", "convo_starter_3", "english_translate_3", "media_3", "vocab_1_3", "vocab_2_3", "vocab_3_3", "funny_3", "example_response_3", "example_response_translate_3"]
+    
+    # Save the updated DataFrame back to a CSV file
+    df.to_csv('updated_file.csv', index=False)
+
+
+# clean_data()
+fix_column_names()
