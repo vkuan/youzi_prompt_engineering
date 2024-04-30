@@ -122,9 +122,6 @@ def generate_haixiu_convos():
                     generate_convo_starter(curr_vibe, x, y, z, 0, 0)
                     generate_convo_starter(curr_vibe, x, y, z, 0, 1)
 
-# generate_icebreaker_convos()
-# generate_haixiu_convos()
-
 list_of_trauma_vibes = ["profound trauma bonding vibe", "thoughtful trauma bonding vibe", "relaxing trauma bonding vibe"]
 list_of_trauma_subvibes = ["ABC childhood trauma bonding", "career trauma bonding", "academics trauma", "romance struggles"]
 list_of_trauma_topics_0 = ["something weird that happened during your childhood", "something absurd that happened during your childhood", "something weird that happened with your parents", "weird childhood conflicts", "battles with your siblings", "weird academic pressures that your parents put on you", "weird academic childhood stories", "going to Chinese school in America"]
@@ -154,8 +151,6 @@ def generate_trauma_convos():
                     generate_convo_starter(curr_vibe, x, y, z, 0, 1)
 
 
-# generate_trauma_convos()
-
 list_of_media_vibes = ["interesting Chinese media vibe", "interesting Taiwanese and Hong Kong media vibe", "fun Chinese and Taiwanese media vibe"]
 list_of_media_subvibes = ["Songs", "TV Shows & Movies", "News and Current Events", "News and Current Events"]
 list_of_media_topics_0 = ["favorite Chinese singers", "favorite Taiwanese singers", "parents' favorite singers", "music that makes you dance", "music that you study to", "weird music", "favorite genres of music", "Jay Chou", "listening to Chinese music", "understanding Chinese music", "recent popular must-listen Chinese music"]
@@ -167,40 +162,40 @@ def generate_media_convos():
     curr_vibe = "Chinese media"
     for x in list_of_media_vibes:
         for y in list_of_media_subvibes:
-            # if y == "Songs":
-            #     for z in list_of_media_topics_0:
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 0)
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 1)
-            # elif y == "TV Shows & Movies":
-            #     for z in list_of_media_topics_1:
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 0)
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 1)
-            # if y == "News and Current Events":
-            #     for z in list_of_media_topics_2:
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 0)
-            #         generate_convo_starter(curr_vibe, x, y, z, 0, 1)
-            if y == "News and Current Events":
+            if y == "Songs":
+                for z in list_of_media_topics_0:
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 0)
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 1)
+            elif y == "TV Shows & Movies":
+                for z in list_of_media_topics_1:
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 0)
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 1)
+            elif y == "News and Current Events":
+                for z in list_of_media_topics_2:
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 0)
+                    generate_convo_starter(curr_vibe, x, y, z, 0, 1)
+            elif y == "News and Current Events":
                 for z in list_of_media_topics_3:
                     generate_convo_starter(curr_vibe, x, y, z, 0, 0)
                     generate_convo_starter(curr_vibe, x, y, z, 0, 1)
 
 
 
-generate_media_convos()
-generate_icebreaker_convos()
-generate_haixiu_convos()
-generate_trauma_convos()
+# uncomment these function calls as needed
+# generate_media_convos()
+# generate_icebreaker_convos()
+# generate_haixiu_convos()
+# generate_trauma_convos()
+
+# example tester of generate_convo_starter
+# for x in range(1, 3): 
+#     generate_convo_starter("silly and funny", "test", "hypothetically what you would do if you met the most attractive person of all time", 1, 1)
 
 # for x in range(1, 10): 
 #     generate_convo_starter("profound", "interesting childhood memories")
 
 # for x in range(1, 10): 
 #     generate_convo_starter("spicy", "your deepest darkest secrets")
-
-
-# example tester of generate_convo_starter
-for x in range(1, 3): 
-    generate_convo_starter("silly and funny", "test", "hypothetically what you would do if you met the most attractive person of all time", 1, 1)
 
 
 # Vibes brainstorming / reference
